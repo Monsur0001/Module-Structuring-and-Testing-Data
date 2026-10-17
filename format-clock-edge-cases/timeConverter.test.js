@@ -9,3 +9,33 @@ test("correctly convert time after 12:00", function(){
 test("can correctly convert morning time", function() {
     assert.equal(formatAs12HourClock("08:00"), "08:00 am");
 });
+
+//It still has bugs. Think of as many edge-cases as you 
+//can with this code. Write tests for all of them, and 
+//fix this code so that it works correctly for all valid 
+//inputs. You don't need to worry about invalid inputs 
+//(e.g. `"25:00"`).
+//Here are some additional edge cases to consider for the `formatAs12HourClock` function, along with the corresponding tests:```javascript
+test("correctly convert midnight", function() {
+    assert.equal(formatAs12HourClock("00:00"), "12:00 am");
+});
+
+test("correctly convert noon", function() {
+    assert.equal(formatAs12HourClock("12:00"), "12:00 pm");
+});
+
+test("correctly convert single digit hour in the morning", function() {
+    assert.equal(formatAs12HourClock("01:30"), "01:30 am");
+});
+
+test("correctly convert single digit hour in the afternoon", function() {
+    assert.equal(formatAs12HourClock("13:45"), "01:45 pm");
+});
+
+test("correctly convert time with leading zeros", function() {
+    assert.equal(formatAs12HourClock("09:05"), "09:05 am");
+});
+
+test("correctly convert time with no leading zeros", function() {
+    assert.equal(formatAs12HourClock("9:5"), "09:05 am");
+});

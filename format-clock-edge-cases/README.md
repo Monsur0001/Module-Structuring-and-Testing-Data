@@ -13,3 +13,4 @@ function formatAs12HourClock(time) {
 ```
 
 It still has bugs. Think of as many edge-cases as you can with this code. Write tests for all of them, and fix this code so that it works correctly for all valid inputs. You don't need to worry about invalid inputs (e.g. `"25:00"`).
+
