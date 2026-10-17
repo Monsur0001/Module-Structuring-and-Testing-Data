@@ -9,12 +9,16 @@ function formatAs12HourClock(time) {
     const formattedHours = convertedHours < 10 ? `0${convertedHours}` : convertedHours;
     return `${formattedHours}:${minutes} pm`;
   }
+  //handling noon. 
   if (hours === 12) {
     return `12:${minutes} pm`;
   }
+
+  //handling midnight
   if (hours === 0) {
     return `12:${minutes} am`;
   }
+  //handling morning times
   return `${time} am`;
 }
 

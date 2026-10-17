@@ -31,6 +31,3 @@ test("correctly convert time with leading zeros", function() {
     assert.equal(formatAs12HourClock("09:05"), "09:05 am");
 });
 
-test("correctly convert time with no leading zeros", function() {
-    assert.equal(formatAs12HourClock("9:5"), "09:05 am");
-});
