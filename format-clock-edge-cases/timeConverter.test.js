@@ -10,12 +10,7 @@ test("can correctly convert morning time", function() {
     assert.equal(formatAs12HourClock("08:00"), "08:00 am");
 });
 
-//It still has bugs. Think of as many edge-cases as you 
-//can with this code. Write tests for all of them, and 
-//fix this code so that it works correctly for all valid 
-//inputs. You don't need to worry about invalid inputs 
-//(e.g. `"25:00"`).
-//Here are some additional edge cases to consider for the `formatAs12HourClock` function, along with the corresponding tests:```javascript
+
 test("correctly convert midnight", function() {
     assert.equal(formatAs12HourClock("00:00"), "12:00 am");
 });

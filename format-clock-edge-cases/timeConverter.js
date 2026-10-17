@@ -1,15 +1,19 @@
 function formatAs12HourClock(time) {
 
   const hours = Number(time.slice(0, 2));
+  const minutes = time.slice(3, 5);
 
   if (hours > 12) {
-    return `${hours - 12}:00 pm`;
+    const convertedHours = hours - 12;
+    // Add leading zero if convertedHours is a single digit
+    const formattedHours = convertedHours < 10 ? `0${convertedHours}` : convertedHours;
+    return `${formattedHours}:${minutes} pm`;
   }
   if (hours === 12) {
-    return `${time} pm`;
+    return `12:${minutes} pm`;
   }
   if (hours === 0) {
-    return `12:00 am`;
+    return `12:${minutes} am`;
   }
   return `${time} am`;
 }
