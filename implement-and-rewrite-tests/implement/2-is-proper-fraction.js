@@ -16,4 +16,9 @@
 
   // TODO: Implement this function
 
- 
+  function isProperFraction(numerator, denominator) {
+   
+    
+  }
+
+  
