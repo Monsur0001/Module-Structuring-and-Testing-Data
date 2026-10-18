@@ -37,6 +37,15 @@ function getCardValue(card) {
     throw new Error(`Expected a number followed by a suit, but got "${card}"`);
   }
 
+   // Determine the value of the card
+  if (rank === "A") {
+    return 11;
+  } else if (["J", "Q", "K"].includes(rank)) {
+    return 10;
+  } else {
+    return parseInt(rank, 10);
+  }
+
  
 }
 
